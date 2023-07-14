@@ -17,6 +17,7 @@ window.addEventListener("load", function() {
     const rocketImg = document.getElementById("rocket");
     rocketImg.style.position = "absolute";
     rocketImg.style.bottom = "0px";
+    rocketImg.style.left = "175px";
 
 
 
@@ -59,16 +60,19 @@ window.addEventListener("load", function() {
     upBtn.addEventListener("click", function() {
         rocketImg.style.bottom = parseInt(rocketImg.style.bottom) + 10 + "px"
         console.log(rocketImg.style.bottom);
-    })
+    });
     downBtn.addEventListener("click", function() {
-        console.log("Button clicked!")
-    })
+        rocketImg.style.bottom = parseInt(rocketImg.style.bottom) - 10 + "px"
+        console.log(rocketImg.style.bottom);
+    });
     leftBtn.addEventListener("click", function() {
-        console.log("Button clicked!")
-    })
+        rocketImg.style.left = parseInt(rocketImg.style.left) + 10 + "px"
+        console.log(rocketImg.style.left);
+    });
     rightBtn.addEventListener("click", function() {
-        console.log("Button clicked!")
-    })
+        rocketImg.style.left = parseInt(rocketImg.style.left) - 10 + "px"
+        console.log(rocketImg.style.left);
+    });
 
 
 });
