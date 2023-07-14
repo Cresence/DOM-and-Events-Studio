@@ -41,6 +41,8 @@ window.addEventListener("load", function() {
         shuttleBg.style.backgroundColor = "green";
 
         shuttleHt.innerHTML = 0;
+
+        rocketImg.style.bottom = "0px"
     });
 
     missionAbortBtn.addEventListener("click", function() {
@@ -58,21 +60,24 @@ window.addEventListener("load", function() {
     });
 
     upBtn.addEventListener("click", function() {
-        rocketImg.style.bottom = parseInt(rocketImg.style.bottom) + 10 + "px"
-        console.log(rocketImg.style.bottom);
+        if (parseInt(rocketImg.style.bottom) !== 250) {
+            rocketImg.style.bottom = parseInt(rocketImg.style.bottom) + 10 + "px"
+        }
     });
     downBtn.addEventListener("click", function() {
-        rocketImg.style.bottom = parseInt(rocketImg.style.bottom) - 10 + "px"
-        console.log(rocketImg.style.bottom);
+        if (parseInt(rocketImg.style.bottom) !== 0) {
+            rocketImg.style.bottom = parseInt(rocketImg.style.bottom) - 10 + "px"
+        }
+        
     });
     leftBtn.addEventListener("click", function() {
-        rocketImg.style.left = parseInt(rocketImg.style.left) + 10 + "px"
-        console.log(rocketImg.style.left);
+        if (parseInt(rocketImg.style.left) < 385) {
+            rocketImg.style.left = parseInt(rocketImg.style.left) + 10 + "px"
+        }
     });
     rightBtn.addEventListener("click", function() {
-        rocketImg.style.left = parseInt(rocketImg.style.left) - 10 + "px"
-        console.log(rocketImg.style.left);
+        if (parseInt(rocketImg.style.left) > -15) {
+            rocketImg.style.left = parseInt(rocketImg.style.left) - 10 + "px"
+        }
     });
-
-
 });
